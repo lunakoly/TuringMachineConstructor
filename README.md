@@ -1,7 +1,7 @@
 # About
 This code is an API for defining turing machines.
 
-Special thanks to _Undumendil_ for providing a turing machine implementation: https://github.com/Undumendil/tm.
+Special thanks to _Undumendil_ for providing a turing machine implementation: https://github.com/Undumendil/tm. A Compiled version of `tm` is available under `out/tm` (compiled via Ubuntu on Windows).
 
 
 # Example
