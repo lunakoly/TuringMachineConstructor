@@ -1,0 +1,62 @@
+[:] q1
+[.] q0
+
+q1 . -> q2 . r
+q1 1 -> q1 1 r
+q1 X -> q1 X r
+q2 . -> q3 . l
+q2 1 -> q3 1 l
+q2 X -> q3 X l
+q3 . -> q3 . r
+q3 1 -> q4 1 r
+q3 X -> q4 X r
+q4 . -> q5 . l
+q4 1 -> q5 1 l
+q4 X -> q5 X l
+q5 X -> q6 X l
+q5 1 -> q10 1 r
+q6 . -> q6 . l
+q6 1 -> q7 1 r
+q6 X -> q6 X l
+q7 . -> q8 . l
+q7 1 -> q8 1 l
+q7 X -> q8 X l
+q8 1 -> q8 1 l
+q8 . -> q9 . r
+q8 X -> q9 X r
+q9 . -> q18 . l
+q9 1 -> q18 1 l
+q9 X -> q18 X l
+q10 1 -> q10 1 r
+q10 . -> q11 . l
+q10 X -> q11 X l
+q11 . -> q12 . l
+q11 1 -> q12 . l
+q11 X -> q12 . l
+q12 1 -> q12 1 l
+q12 . -> q13 . r
+q12 X -> q13 X r
+q13 . -> q14 . l
+q13 1 -> q14 1 l
+q13 X -> q14 X l
+q14 . -> q14 . l
+q14 1 -> q15 1 r
+q14 X -> q14 X l
+q15 . -> q16 . l
+q15 1 -> q16 1 l
+q15 X -> q16 X l
+q16 . -> q17 . l
+q16 1 -> q17 . l
+q16 X -> q17 . l
+q17 . -> q3 . r
+q17 1 -> q3 1 r
+q17 X -> q3 X r
+q18 . -> q0 . r
+q18 1 -> q0 1 r
+q18 X -> q0 X r
+
+=-=-=
+inf~-1: .
+0~inf: .
+-4~-1: . . . .
+0: 1 1 1 1 1 . 1 1 1 X . .
