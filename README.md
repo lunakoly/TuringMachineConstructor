@@ -1,6 +1,8 @@
 # About
 This code is an API for defining turing machines.
 
+Special thanks to _Undumendil_ for providing a turing machine implementation: https://github.com/Undumendil/tm.
+
 
 # Example
 ## Running *subtraction.dtm*:
@@ -90,3 +92,57 @@ Defined in `turing.py`
 
 ### function `state(self)`
 Allocates a state within the machine.
+
+
+## class `LNRState`
+A state of a machine that can describe
+its movement direction via 'l', 'n' and 'r'.
+
+Defined in `lnr.py`
+
+### Helpers
+```
+move_while(self, condition, direction, overstep=N)
+
+move_left_while(self, condition, overstep=N)
+
+move_right_while(self, condition, overstep=N)
+
+move_until(self, condition, direction, overstep=N)
+
+move_left_until(self, condition, overstep=N)
+
+move_right_until(self, condition, overstep=N)
+
+step(self, direction, symbol=KEEP)
+
+step_left(self, symbol=KEEP)
+
+step_right(self, symbol=KEEP)
+
+drop(self, symbol, direction=N)
+
+end(self)
+```
+
+
+## module `Compiler`
+Helper functions for turning a TM
+description into a particular text representation.
+
+Defined as `compiler.py`
+
+### function `save(filename, data, task)`
+Writes the `data` to the `filename` and
+logs messages with `task` prefix.
+
+### function `compile_dtm(machine, file=None, blank='_')`
+Compiles a machine into the representation
+that can be used by Danya's turing machine
+implementation.
+
+### function `compile_turing(machine, file=None)`
+Compiles a machine into the representation
+that the universal turing machine (`universal.py`)
+can handle. Don't forget about putting enough symbols
+on the tape before compiling!
