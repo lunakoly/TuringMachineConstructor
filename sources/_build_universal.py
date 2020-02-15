@@ -18,7 +18,7 @@ TARGET = 'out/subtraction.utm'
 machine = UniversalMachine()
 
 with open(TARGET) as file:
-    machine.TAPE = '* ' + file.readline().strip()
+	machine.TAPE = '* ' + file.readline().strip()
 
 
 result = compiler.compile_dtm(machine, 'out/universal.dtm', blank='.')
